@@ -6,7 +6,6 @@
 
 [core]
   editor = nvim
-  pager = diff-highlight | less -FRX
 
 [color]
   ui = always
@@ -15,7 +14,6 @@
   interactive = always
   status = always
   grep = always
-  pager = true
   decorate = always
   showbranch = always
 
@@ -29,12 +27,10 @@
   b = branch
   bb = branch -a
   bd = branch -d
-  cherry-pit = "!f() { git rebase --rebase-merges --onto \"$1\"^ \"$1\"; }; f"
   cm = commit -m
   co = checkout
   d = diff
   ec = config --global -e
-  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
   l = log --relative-date --graph --abbrev-commit -10
   la = l --all
   ll = log --relative-date --graph --abbrev-commit
